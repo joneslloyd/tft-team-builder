@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Team Fight Tactics (TFT) team builder by Mobalytics</title>
     <style>
         .moba-tft-comp-builder {
@@ -49,12 +50,12 @@
     </div>
 </div>
 <div id="comp-builder-container"></div>
+<script>!function (a, b, d, e, c, f, g) {
+    a[e] = a[e] || {}, a[e][c] = a[e][c] || {}, a[e][c][f] = a[e][c][f] || function () {
+        a[e][c][f].args = arguments
+    }, (g = b.createElement(d)).src = "https://cdn.jsdelivr.net/gh/mobalyticshq/tft-team-builder/dist/index.min.js", g.async = 1, (d = b.getElementsByTagName(d)[0]).parentNode.insertBefore(g, d)
+}(window, document, "script", "mobalytics", "tft", "compBuilder");</script>
 <script>
-    !function (e, t, n, c, o, r, s) {
-        e[c] = e[c] || {}, e[c][o] = e[c][o] || {}, e[c][o][r] = e[c][o][r] || function () {
-            e[c][o][r].args = arguments
-        }, (s = t.createElement(n)).src = "https://cdn.jsdelivr.net/gh/mobalyticshq/tft-team-builder/dist/index.min.js", s.async = 1, (n = t.getElementsByTagName(n)[0]).parentNode.insertBefore(s, n)
-    }(window, document, "script", "mobalytics", "tft", "compBuilder");
     mobalytics.tft.compBuilder({
         container: "#comp-builder-container",
         tftSet: "set2",
