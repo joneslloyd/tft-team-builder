@@ -1,6 +1,6 @@
 {
   "name": "tft-team-builder",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Team Fight Tactics (TFT) team builder by Mobalytics",
   "main": "dist/index.min.js",
   "scripts": {
