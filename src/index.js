@@ -123,7 +123,7 @@
             }
         });
 
-        container.parentNode.appendChild(iframe);
+        insertFirst(container, iframe);
         compBuilder.iframe = iframe;
     }
 
