@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Team Fight Tactics (TFT) team builder by Mobalytics</title>
+    <style>
+        .moba-tft-comp-builder {
+            width: 100%;
+            min-height: 180px;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        #comp-builder-container {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h2>Builder info</h2>
+    <div>
+        <div id="builder-loaded">Builder is loaded: false</div>
+        <div id="builder-size"></div>
+        <div id="builder-state">Builder state: AwQwzApgZjsKx0rWA2B1lSA%3D~EwRiA%3D%3D%3D</div>
+        <div id="builder-carry-champions">Carry champions: 14</div>
+        <div id="builder-moba-url">Moba url:<a
+                href="https://app.mobalytics.gg/en_us/tft/set2/comp-builder?map=AwQwzApgZjtgnJWsBsBWN1lSA===~IwFiA==="
+                target="_blank">https://app.mobalytics.gg/en_us/tft/set2/comp-builder?map=AwQwzApgZjtgnJWsBsBWN1lSA===~IwFiA===</a>
+        </div>
+    </div>
+    <div>
+        <h3>Languages</h3>
+        <button onclick="onChangeLanguage('ru_ru')">ru_RU</button>
+        <button onclick="onChangeLanguage('en_us')">en_US</button>
+        <button onclick="onChangeLanguage('ja_jp')">ja_JP</button>
+        <button onclick="onChangeLanguage('de_de')">de_DE</button>
+    </div>
+    <div>
+        <h3>Change state</h3>
+        <button onclick="onChangeState('set2', 'CwVgjAnAZjvBIDGs4BMwCMUxCY2cIA2AZgKLBK2yNRICYCB2MXAoA===')">
+            Sum Sins (TFT Set 2)
+        </button>
+        <button onclick="onChangeState('set2', 'AwQwzApgZjsKx0rWA2B1lSA%3D~EwRiA%3D%3D%3D')">Mock state 2</button>
+        <button onclick="onChangeState('set2', 'AwQwzApgZjsKx0rWA2B1lSA%3D~EwRiA%3D%3D%3D')">Mock state 3</button>
+        <button onclick="onChangeState('set1', 'IwVgzATAZjsQJgBgJy1meo0wCzldiCMAWkA%3D')">
+            Mock state 4 (TFT Set 1)
+        </button>
+    </div>
+</div>
+<div id="comp-builder-container"></div>
+<script>
+    !function (e, t, n, c, o, r, s) {
+        e[c] = e[c] || {}, e[c][o] = e[c][o] || {}, e[c][o][r] = e[c][o][r] || function () {
+            e[c][o][r].args = arguments
+        }, (s = t.createElement(n)).src = "https://cdn.jsdelivr.net/gh/mobalyticshq/tft-team-builder/dist/index.min.js", s.async = 1, (n = t.getElementsByTagName(n)[0]).parentNode.insertBefore(s, n)
+    }(window, document, "script", "mobalytics", "tft", "compBuilder");
+    mobalytics.tft.compBuilder({
+        container: "#comp-builder-container",
+        tftSet: "set2",
+        state: "AwQwzApgZjsKx0rWA2B1lSA%3D~EwRiA%3D%3D%3D",
+        language: "en_us",
+        domain: "http://localhost:3001",
+    });
+</script>
+</body>
+</html>
