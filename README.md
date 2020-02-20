@@ -15,7 +15,7 @@ Team Fight Tactics (TFT) team builder is distributed as widget which you can eas
 
 2. Add an integration script section.
 ```
-<script>!function(a,b,d,e,c,f,g){a[e]=a[e]||{},a[e][c]=a[e][c]||{},a[e][c][f]=a[e][c][f]||function(){a[e][c][f].args=arguments},(g=b.createElement(d)).src="https://cdn.jsdelivr.net/gh/mobalyticshq/tft-team-builder/dist/index.min.js",g.async=1,(d=b.getElementsByTagName(d)[0]).parentNode.insertBefore(g,d)}(window,document,"script","mobalytics","tft","compBuilder");</script>
+<script>!function(a,b,d,e,c,f,g){a[e]=a[e]||{},a[e][c]=a[e][c]||{},a[e][c][f]=a[e][c][f]||function(){a[e][c][f].args=arguments},(g=b.createElement(d)).src="https://cdn.jsdelivr.net/gh/mobalyticshq/tft-team-builder@1.0.1/dist/index.min.js",g.async=1,(d=b.getElementsByTagName(d)[0]).parentNode.insertBefore(g,d)}(window,document,"script","mobalytics","tft","compBuilder");</script>
 ```
 
 3. Add a configuration script section, see other configuration options bellow.
