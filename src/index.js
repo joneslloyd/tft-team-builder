@@ -16,7 +16,10 @@
         SET_LANGUAGE: 1,
     };
 
-    const defaults = {tftSet: 'set2', language: 'en_us', domain: 'https://app.mobalytics.gg'};
+    const doc = wnd.document;
+    const iframeId = 'moba-tft-comp-builder';
+    const styleId = 'moba-tft-comp-builder-style';
+    const defaults = { tftSet: 'set2', language: 'en_us', domain: 'https://app.mobalytics.gg', state: '' };
     const mobalytics = wnd.mobalytics || {};
     const tft = mobalytics.tft || {};
     const compBuilder = tft.compBuilder || {};
@@ -24,6 +27,11 @@
     // endregion
 
     // region ---- utils
+    function insertFirst(parent, node) {
+        const first = parent.firstChild;
+        first ? parent.insertBefore(node, first) : parent.appendChild(node);
+    }
+
     function printError(...args) {
         console.error('Mobalytics TFT comps builder error', ...args);
     }
@@ -56,14 +64,34 @@
             return;
         }
 
-        const container = wnd.document.querySelector(finalSettings.container);
+        const container = doc.querySelector(finalSettings.container);
         if (!container) {
             printError('Unable to find container by selector', finalSettings.container);
             return
         }
 
+        const iframeEl = doc.getElementById(iframeId);
+        if (iframeEl) {
+            printError('Element with required id already exists', iframeId);
+        }
+
+        let style = doc.getElementById(styleId);
+        if (!style) {
+            style = doc.createElement('style');
+            style.setAttribute('id', styleId);
+            style.setAttribute('type', 'text/css');
+            const css = '.moba-tft-comp-builder{width: 100%;min-height: 180px;padding: 0;margin: 0 auto;}';
+            if (style.styleSheet) {
+                style.styleSheet.cssText = css;
+            } else {
+                style.appendChild(doc.createTextNode(css));
+            }
+
+            insertFirst(doc.head, style);
+        }
+
         const iframe = wnd.document.createElement('iframe');
-        iframe.setAttribute('id', 'moba-tft-comp-builder');
+        iframe.setAttribute('id', iframeId);
         iframe.setAttribute('scrolling', 'no');
         iframe.setAttribute('frameborder', '0');
         iframe.setAttribute('src', `${domain}/${language}/tft/${tftSet}/comp-builder-external?map=${state}`);
