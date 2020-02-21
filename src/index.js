@@ -133,7 +133,6 @@
     function setLanguage(language) {
         if (compBuilder.iframe) {
             const action = {type: ActionType.SET_LANGUAGE, data: {language: language}};
-            compBuilder.iframe.style.height = '';
             compBuilder.iframe.contentWindow.postMessage({slug: MessageSlug.ACTION, action: action}, '*');
         } else printError('Unable to setLanguage, not rendered');
     }
@@ -141,7 +140,6 @@
     function setState(tftSet, state) {
         if (compBuilder.iframe) {
             const action = {type: ActionType.SET_STATE, data: {tftSet: tftSet, state: state}};
-            compBuilder.iframe.style.height = '';
             compBuilder.iframe.contentWindow.postMessage({slug: MessageSlug.ACTION, action: action}, '*');
         } else printError('Unable to setLanguage, not rendered');
     }
