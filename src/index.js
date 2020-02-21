@@ -19,7 +19,7 @@
     const doc = wnd.document;
     const iframeId = 'moba-tft-comp-builder';
     const styleId = 'moba-tft-comp-builder-style';
-    const defaults = { tftSet: 'set2', language: 'en_us', domain: 'https://app.mobalytics.gg', state: '' };
+    const defaults = { tftSet: 'set2', language: 'en_us', domain: 'https://app.stg.mobalytics.gg', state: '' };
     const mobalytics = wnd.mobalytics || {};
     const tft = mobalytics.tft || {};
     const compBuilder = tft.compBuilder || {};
