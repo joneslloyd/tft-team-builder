@@ -34,10 +34,10 @@ Checkout [complete example](https://mobalyticshq.github.io/tft-team-builder/) fo
 
 Following options are available for `mobalytics.tft.compBuilder` call:
 
-* container - CSS selector for the div container.
-* tftSet - TFT set to be displayed, available options are: set1, set2.
-* language - Language to be used, available options are: ru_ru, en_us, de_de, ja_jp.
-* state - Initial state of the builder.
+* `container` - CSS selector for the div container.
+* `tftSet` - TFT set to be displayed, available options are: set1, set2.
+* `language` - Language to be used, available options are: ru_ru, en_us, de_de, ja_jp.
+* `state` - Initial state of the builder.
 
 Example:
 ```
@@ -55,55 +55,55 @@ Following methods are available for `window.mobalytics.tft.compBuilder` namespac
 
 * setState(value: string): void - Set current team builder state
 ```
-    window.mobalytics.tft.compBuilder.setState("CwVgjAnAZjvBIDGs4BMwCMUxCY2cIA2AZgKLBK2yNRICYCB2MXAoA===");
+window.mobalytics.tft.compBuilder.setState("CwVgjAnAZjvBIDGs4BMwCMUxCY2cIA2AZgKLBK2yNRICYCB2MXAoA===");
 ```
 * setLanguage(value: string): void - Set current language, available options are: ru_ru, en_us, de_de, ja_jp.
 ```
-    window.mobalytics.tft.compBuilder.setLanguage("ja_jp");
+window.mobalytics.tft.compBuilder.setLanguage("ja_jp");
 ``` 
 
 ## Properties
 
 Following properties available for `window.mobalytics.tft.compBuilder` namespace:
 
-* isLoaded - Define if team builder is already loaded
+* `isLoaded` - Define if team builder is already loaded
 ```
-    console.debug(window.mobalytics.tft.compBuilder.isLoaded);
+console.debug(window.mobalytics.tft.compBuilder.isLoaded);
 ```
 
 ## Events
 
 Following events can be received via `addEventListener` method of the `document`.
 
-* mobalytics.tft.compsBuilder.loaded - Fired then team builder is loaded.
+* `mobalytics.tft.compsBuilder.loaded` - Fired then team builder is loaded.
 ```
-    document.addEventListener('mobalytics.tft.compsBuilder.loaded', function () {
-       console.debug('Loaded');
-    });
+document.addEventListener('mobalytics.tft.compsBuilder.loaded', function () {
+   console.debug('Loaded');
+});
 ```
 * mobalytics.tft.compsBuilder.error - Fired if there was an error during team builder loading.
 ```
-    document.addEventListener('mobalytics.tft.compsBuilder.error', function () {
-       console.debug('Error');
-    });
+document.addEventListener('mobalytics.tft.compsBuilder.error', function () {
+   console.debug('Error');
+});
 ``` 
-* mobalytics.tft.compsBuilder.resize - Fired if the size of the team builder changed.
+* `mobalytics.tft.compsBuilder.resize` - Fired if the size of the team builder changed.
 ```
-    document.addEventListener('mobalytics.tft.compsBuilder.resize', function (event) {
-       console.debug('Resize', event.data.width, event.data.height);
-    });
+document.addEventListener('mobalytics.tft.compsBuilder.resize', function (event) {
+   console.debug('Resize', event.data.width, event.data.height);
+});
 ```
-* mobalytics.tft.compsBuilder.stateChanged  - Fired if current state of the team builder changed.
+* `mobalytics.tft.compsBuilder.stateChanged`  - Fired if current state of the team builder changed.
 ```
-    document.addEventListener('mobalytics.tft.compsBuilder.loaded', function () {
-       console.debug(
-            'State changed',
-            event.data.language,
-            event.data.tftSet
-            event.data.state,
-            event.data.carryChampions,
-        );
-    });
+document.addEventListener('mobalytics.tft.compsBuilder.loaded', function () {
+   console.debug(
+        'State changed',
+        event.data.language,
+        event.data.tftSet
+        event.data.state,
+        event.data.carryChampions,
+    );
+});
 ```
 
 
@@ -115,6 +115,10 @@ Following events can be received via `addEventListener` method of the `document`
 * [Tier List](https://app.mobalytics.gg/tft/tier-list/champions)
 * [TFT Wiki](https://app.mobalytics.gg/tft/wiki/classes/all)
 * [TFT Guides](https://mobalytics.gg/blog/tft/)
+
+
+## Contributing Guide
+todo
 
 ## License
 todo
