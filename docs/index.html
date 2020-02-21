@@ -4,52 +4,69 @@
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     <title>Team Fight Tactics (TFT) team builder by Mobalytics</title>
-    <style>
-        #comp-builder-container {
-            margin-top: 30px;
-        }
-    </style>
+    <meta name="description"
+          content="Team Fight Tactics (TFT) team builder is distributed as widget which you can easily install on your website.">
+    <meta property="og:image"
+          content="https://mobalyticshq.github.io/tft-team-builder/tft-mobalytics-team-builder.jpg"/>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400&display=swap" rel="stylesheet"/>
 </head>
 <body>
-
-<!-- external controls (OPTIONAL)  -->
-<div>
-    <h2>Builder info</h2>
-    <div>
-        <div id="builder-loaded">Builder is loaded: false</div>
-        <div id="builder-size"></div>
-        <div id="builder-state">Builder state: AwQwzApgZjsKx0rWA2B1lSA%3D~EwRiA%3D%3D%3D</div>
-        <div id="builder-carry-champions">Carry champions: 14</div>
-        <div id="builder-moba-url">Moba url:<a
-                href="https://app.mobalytics.gg/en_us/tft/set2/comp-builder?map=AwQwzApgZjtgnJWsBsBWN1lSA===~IwFiA==="
-                target="_blank">https://app.mobalytics.gg/en_us/tft/set2/comp-builder?map=AwQwzApgZjtgnJWsBsBWN1lSA===~IwFiA===</a>
+<div class="content">
+    <h1>Team Fight Tactics (TFT) team builder by Mobalytics</h1>
+    <div class="page-description">Team Fight Tactics (TFT) team builder is distributed as widget which you can easily
+        install on your website.
+    </div>
+    <div class="page-controls">
+        <h3>Builder info</h3>
+        <div class="page-controls-info">
+            <div id="builder-loaded">Builder is loaded: false</div>
+            <div id="builder-size"></div>
+            <div id="builder-state">Builder state: AwQwzApgZjsKx0rWA2B1lSA%3D~EwRiA%3D%3D%3D</div>
+            <div id="builder-carry-champions">Carry champions: 14</div>
+            <div id="builder-moba-url">Moba url:<a
+                    href="https://app.mobalytics.gg/en_us/tft/set2/comp-builder?map=AwQwzApgZjtgnJWsBsBWN1lSA===~IwFiA==="
+                    target="_blank">https://app.mobalytics.gg/en_us/tft/set2/comp-builder?map=AwQwzApgZjtgnJWsBsBWN1lSA===~IwFiA===</a>
+            </div>
         </div>
     </div>
-    <div>
-        <h3>Languages</h3>
-        <button onclick="onChangeLanguage('ru_ru')">ru_RU</button>
-        <button onclick="onChangeLanguage('en_us')">en_US</button>
-        <button onclick="onChangeLanguage('ja_jp')">ja_JP</button>
-        <button onclick="onChangeLanguage('de_de')">de_DE</button>
+    <div class="page-controls-bar">
+        <div>
+            <h3>Languages</h3>
+            <div class="page-controls-bar-buttons">
+                <button onclick="onChangeLanguage('ru_ru')">ru_RU</button>
+                <button onclick="onChangeLanguage('en_us')">en_US</button>
+                <button onclick="onChangeLanguage('ja_jp')">ja_JP</button>
+                <button onclick="onChangeLanguage('de_de')">de_DE</button>
+            </div>
+        </div>
+        <div>
+            <h3>Change state</h3>
+            <div class="page-controls-bar-buttons">
+                <button onclick="onChangeState('set2', 'CwVgjAnAZjvBIDGs4BMwCMUxCY2cIA2AZgKLBK2yNRICYCB2MXAoA===')">
+                    Sum Sins (TFT Set 2)
+                </button>
+                <button onclick="onChangeState('set2', 'AwQwzApgZjsKx0rWA2B1lSA%3D~EwRiA%3D%3D%3D')">Mock state 2
+                </button>
+                <button onclick="onChangeState('set2', 'AwQwzApgZjsKx0rWA2B1lSA%3D~EwRiA%3D%3D%3D')">Mock state 3
+                </button>
+                <button onclick="onChangeState('set1', 'IwVgzATAZjsQJgBgJy1meo0wCzldiCMAWkA%3D')">
+                    Mock state 4 (TFT Set 1)
+                </button>
+            </div>
+        </div>
     </div>
-    <div>
-        <h3>Change state</h3>
-        <button onclick="onChangeState('set2', 'CwVgjAnAZjvBIDGs4BMwCMUxCY2cIA2AZgKLBK2yNRICYCB2MXAoA===')">
-            Sum Sins (TFT Set 2)
-        </button>
-        <button onclick="onChangeState('set2', 'AwQwzApgZjsKx0rWA2B1lSA%3D~EwRiA%3D%3D%3D')">Mock state 2</button>
-        <button onclick="onChangeState('set2', 'AwQwzApgZjsKx0rWA2B1lSA%3D~EwRiA%3D%3D%3D')">Mock state 3</button>
-        <button onclick="onChangeState('set1', 'IwVgzATAZjsQJgBgJy1meo0wCzldiCMAWkA%3D')">
-            Mock state 4 (TFT Set 1)
-        </button>
-    </div>
+
+    <!-- div container -->
+    <div id="comp-builder-container"></div>
 </div>
 
-<!-- div container -->
-<div id="comp-builder-container"></div>
-
 <!--integration script section start -->
-<script>!function(a,b,d,e,c,f,g){a[e]=a[e]||{},a[e][c]=a[e][c]||{},a[e][c][f]=a[e][c][f]||function(){a[e][c][f].args=arguments},(g=b.createElement(d)).src="https://cdn.jsdelivr.net/gh/mobalyticshq/tft-team-builder@1.0.1/dist/index.min.js",g.async=1,(d=b.getElementsByTagName(d)[0]).parentNode.insertBefore(g,d)}(window,document,"script","mobalytics","tft","compBuilder");</script>
+<script>!function (a, b, d, e, c, f, g) {
+    a[e] = a[e] || {}, a[e][c] = a[e][c] || {}, a[e][c][f] = a[e][c][f] || function () {
+        a[e][c][f].args = arguments
+    }, (g = b.createElement(d)).src = "https://cdn.jsdelivr.net/gh/mobalyticshq/tft-team-builder@1.0.2/dist/index.min.js", g.async = 1, (d = b.getElementsByTagName(d)[0]).parentNode.insertBefore(g, d)
+}(window, document, "script", "mobalytics", "tft", "compBuilder");</script>
 
 <!--configuration script section -->
 <script>
