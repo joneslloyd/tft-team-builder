@@ -8,6 +8,8 @@ Team Fight Tactics (TFT) team builder is distributed as widget which you can eas
 
 ## Quick Start
 
+To add team builder on your website, do the following:
+
 1. Create a div container with id attribute.
 ```
 <div id="comp-builder-container"></div>
@@ -25,38 +27,84 @@ Team Fight Tactics (TFT) team builder is distributed as widget which you can eas
 </script>
 ```
 
-You're done, checkout [complete example](https://mobalyticshq.github.io/tft-team-builder/) for more details.
+You're done! 
+Checkout [complete example](https://mobalyticshq.github.io/tft-team-builder/) for more details.
 
 ## Configuration Options
 
-todo: more info
+Following options are available for `mobalytics.tft.compBuilder` call:
 
-* container
-* tftSet
-* language
-* state
+* container - CSS selector for the div container.
+* tftSet - TFT set to be displayed, available options are: set1, set2.
+* language - Language to be used, available options are: ru_ru, en_us, de_de, ja_jp.
+* state - Initial state of the builder.
+
+Example:
+```
+mobalytics.tft.compBuilder({
+    container: "#my-div-container-id",
+    tftSet: "set2",
+    language: "ja_jp",
+    state: "CwVgjAnAZjvBIDGs4BMwCMUxCY2cIA2AZgKLBK2yNRICYCB2MXAoA==="
+});
+```
 
 ## Methods
 
-todo: more info
+Following methods are available for `window.mobalytics.tft.compBuilder` namespace after team builder were loaded (see loaded event for more details): 
 
-* setState
-* setLanguage
+* setState(value: string): void - Set current team builder state
+```
+    window.mobalytics.tft.compBuilder.setState("CwVgjAnAZjvBIDGs4BMwCMUxCY2cIA2AZgKLBK2yNRICYCB2MXAoA===");
+```
+* setLanguage(value: string): void - Set current language, available options are: ru_ru, en_us, de_de, ja_jp.
+```
+    window.mobalytics.tft.compBuilder.setLanguage("ja_jp");
+``` 
 
 ## Properties
 
-todo: more info
+Following properties available for `window.mobalytics.tft.compBuilder` namespace:
 
-* isLoaded
+* isLoaded - Define if team builder is already loaded
+```
+    console.debug(window.mobalytics.tft.compBuilder.isLoaded);
+```
 
 ## Events
 
-todo: more info
+Following events can be received via `addEventListener` method of the `document`.
 
-* mobalytics.tft.compsBuilder.loaded 
-* mobalytics.tft.compsBuilder.error 
-* mobalytics.tft.compsBuilder.resize 
-* mobalytics.tft.compsBuilder.stateChanged 
+* mobalytics.tft.compsBuilder.loaded - Fired then team builder is loaded.
+```
+    document.addEventListener('mobalytics.tft.compsBuilder.loaded', function () {
+       console.debug('Loaded');
+    });
+```
+* mobalytics.tft.compsBuilder.error - Fired if there was an error during team builder loading.
+```
+    document.addEventListener('mobalytics.tft.compsBuilder.error', function () {
+       console.debug('Error');
+    });
+``` 
+* mobalytics.tft.compsBuilder.resize - Fired if the size of the team builder changed.
+```
+    document.addEventListener('mobalytics.tft.compsBuilder.resize', function (event) {
+       console.debug('Resize', event.data.width, event.data.height);
+    });
+```
+* mobalytics.tft.compsBuilder.stateChanged  - Fired if current state of the team builder changed.
+```
+    document.addEventListener('mobalytics.tft.compsBuilder.loaded', function () {
+       console.debug(
+            'State changed',
+            event.data.language,
+            event.data.tftSet
+            event.data.state,
+            event.data.carryChampions,
+        );
+    });
+```
 
 
 ## Useful TFT links
