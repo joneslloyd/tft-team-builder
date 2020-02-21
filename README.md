@@ -117,9 +117,6 @@ document.addEventListener('mobalytics.tft.compsBuilder.loaded', function () {
 * [TFT Guides](https://mobalytics.gg/blog/tft/)
 
 
-## Contributing Guide
-todo
-
 ## License
 todo
 
