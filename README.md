@@ -43,6 +43,12 @@ todo: more info
 * setState
 * setLanguage
 
+## Properties
+
+todo: more info
+
+* isLoaded
+
 ## Events
 
 todo: more info
