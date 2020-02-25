@@ -54,7 +54,7 @@ The state is the string of characters after the = sign.
 
 Here is an example of a confiugration script that starts in **Set 2** with **Japanese** as the default language and **CwVgjAnAZjvBIDGs4BMwCMUxCY2cIA2AZgKLBK2yNRICYCB2MXAoA===** as the initial state
 
-**Example:
+**Example:**
 ```
 mobalytics.tft.compBuilder({
     container: "#my-div-container-id",
