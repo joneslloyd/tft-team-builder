@@ -133,5 +133,4 @@ document.addEventListener('mobalytics.tft.compsBuilder.loaded', function () {
 
 
 ## License
-Please be aware that this widget contains a direct link to the Mobalytics website which can not be removed so keep that in mind before use. 
-
+The Mobalytics Team Comp Builder widget is free for personal or commercial use as long as a link to Mobalytics is provided along with it. The widget has such a link built into it automatically and this condition will be met as long as the link is not removed by the user.
