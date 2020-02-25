@@ -1,6 +1,6 @@
 # Team Fight Tactics (TFT) team builder by Mobalytics
 
-Welcome to the **Mobalytics Team Fight Tactics (TFT) team builder embeddable widget**. We went ahead and did all the heavy lifting to make it really easy for you to be able to install this awesome feature on your website! Even better is that we made it sync with the version that is currently running our websdite and any updates to the data or the builder itself will automatically be applied to the widget that you have on your website! Below you will find a quick start guide that has all the information needed inorder to get it up and running.
+Welcome to the **Mobalytics Team Fight Tactics (TFT) team builder embeddable widget**. We went ahead and did all the heavy lifting to make it really easy for you to be able to install this awesome feature on your website! Even better is that we made it sync with the version that is currently running our website and any updates to the data or the builder itself will automatically be applied to the widget that you have on your website! Below you will find a quick start guide that has all the information needed inorder to get it up and running.
 
 <p align="center" style="text-align: center">
   <img width="80%" height="auto" src="https://mobalyticshq.github.io/tft-team-builder/tft-mobalytics-team-builder.jpg" alt="Team Fight Tactics (TFT) team builder by Mobalytics">
